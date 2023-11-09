@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "debug": "ndb server.js"
   },
   "author": "TuanVq",
   "license": "ISC",
@@ -24,6 +25,8 @@
     "mongodb": "^6.2.0",
     "mongoose": "^8.0.0",
     "morgan": "^1.10.0",
-    "prettier": "^3.0.3"
+    "ndb": "^1.1.5",
+    "prettier": "^3.0.3",
+    "slugify": "^1.6.6"
   }
 }
