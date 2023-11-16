@@ -18,7 +18,7 @@ mongoose
     autoIndex: true,
     autoCreate: true,
   })
-  .then((con) => {
+  .then(() => {
     console.log('DB connection successful!');
   })
   .catch((err) => console.log(err));
