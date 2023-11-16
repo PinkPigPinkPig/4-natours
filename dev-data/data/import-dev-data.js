@@ -12,22 +12,20 @@ mongoose
     autoIndex: true,
     autoCreate: true,
   })
-  .then((con) => {
+  .then(() => {
     console.log('DB connection successful!');
   })
   .catch((err) => console.log(err));
 
 // Read JSON file
-const tours = JSON.parse(
-  fs.readFileSync(`${__dirname}/tours-simple.json`, 'utf-8'),
-);
+const tours = JSON.parse(fs.readFileSync(`${__dirname}/tours.json`, 'utf-8'));
 
 // Import data to DB
 const importData = async () => {
   try {
     await Tour.create(tours);
     console.log('Data successfully loaded!');
-    process.exit()
+    process.exit();
   } catch (error) {
     console.log({ error });
   }
@@ -38,7 +36,7 @@ const deleteData = async () => {
   try {
     await Tour.deleteMany();
     console.log('Data successfully deleted!');
-    process.exit()
+    process.exit();
   } catch (error) {
     console.log({ error });
   }
