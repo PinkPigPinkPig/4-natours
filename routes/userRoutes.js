@@ -12,7 +12,7 @@ const {
 } = authController;
 
 const {
-  getAllUSers,
+  getAllUsers,
   createUser,
   getUser,
   updateUser,
@@ -37,7 +37,7 @@ router.patch('/updateMe', protect, updateMe);
 
 router.delete('/deleteMe', protect, deleteMe);
 
-router.route('/').get(getAllUSers).post(createUser);
+router.route('/').get(getAllUsers).post(createUser);
 
 router.route('/:id').get(getUser).patch(updateUser).delete(deleteUser);
 
