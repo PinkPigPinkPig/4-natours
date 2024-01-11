@@ -15,8 +15,8 @@ const DB = process.env.DATABASE;
 
 mongoose
   .connect(DB, {
-    autoIndex: true,
-    autoCreate: true,
+    // autoIndex: true,
+    // autoCreate: true,
   })
   .then(() => {
     console.log('DB connection successful!');
